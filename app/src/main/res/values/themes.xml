@@ -1,9 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.CryptoTracker" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.CryptoTracker" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
     </style>
 
     <style name="Theme.CryptoTracker" parent="Base.Theme.CryptoTracker" />
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">#00FFFFFF</item> <!-- Set the background color to transparent -->
+    </style>
 </resources>

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Crypto Tracker</string>
+    <string name="title">EXCHANGES</string>
+
+    <string name="label_notification">Notification</string>
+    <string name="label_setting">Setting</string>
+
+    <string name="label_filter">Filter</string>
+
+    <string name="hint_search">Search Cryptocurrency</string>
+
+    <string name="label_cryptocurrency">Cryptocurrency</string>
+    <string name="label_nft">NFT</string>
+
+    <string name="label_eshop">E-Shop</string>
+    <string name="label_exchange">Exchange</string>
+    <string name="label_launchpads">Launchpads</string>
+    <string name="label_wallet">Wallet</string>
+
+    <string name="msg_pending_task">"Implementation pending"</string>
 </resources>

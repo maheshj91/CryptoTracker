@@ -4,15 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="@dimen/_12sdp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/search_bg"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_filter"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_search"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:hint="@string/hint_search"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_10ssp"
+            android:background="@null"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart="@drawable/ic_search"
+            app:layout_constraintTop_toTopOf="@+id/search_bg"
+            app:layout_constraintStart_toStartOf="@+id/search_bg"
+            app:layout_constraintEnd_toEndOf="@+id/search_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/search_bg"/>
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingHorizontal="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableStart="@drawable/ic_filter"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/_10ssp"
+            android:drawableTint="@color/black"
+            android:drawablePadding="@dimen/_6sdp"
+            android:text="@string/label_filter"
+            android:background="@drawable/bg_no_background_color"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        layout="@layout/layout_bottom_tab"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
